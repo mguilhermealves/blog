@@ -1,10 +1,10 @@
-@extends('dashboard.layout.layout')
+@extends('dashboard.layout.app')
 
 @section('content')
-    <h1 style="text-align: center">Criar Notícia</h1>
     <div class="col-6" id="news">
         <div class="row">
-            <div class="container">  
+            <div class="container">
+                <h1 style="text-align: center">Criar Notícia</h1>
                 <div class="form-group">
                     <label>Título</label>
                     <input type="text" class="form-control" id="title" placeholder="Digite o título">
@@ -21,7 +21,13 @@
                   </div>
                 <div class="form-group">
                     <label>Descrição</label>
+                    <script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
+                    <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
                     <textarea class="form-control" id="descript" rows="6" style="resize: none"></textarea>
+                </div>
+                <div class="form-group">
+                  <label>Imagem</label>
+                  <input type="file" id="img" class="form-control">
                 </div>
             <br />
             <!-- Button trigger modal -->
@@ -55,6 +61,6 @@
     #news {
         position: absolute;
         left: 25%;
-        top: 30%;
+        top: 15%;
     }
 </style>

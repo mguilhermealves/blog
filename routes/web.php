@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'BlogController@index');
+Route::get('/', 'BlogController@index')->name('home');
 
 //News
-Route::get('/news', 'NewsController@index')->name('news');
+Route::get('/create-news', 'NewsController@index')->name('news');
